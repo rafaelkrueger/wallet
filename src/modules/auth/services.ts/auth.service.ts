@@ -85,7 +85,7 @@ export class AuthService {
 
   async validatePassword(email: string, password: string): Promise<boolean> {
     const user = await this.userModel.findOne({ email: email });
-
+    console.log("apassdoaijdioasjd")
     const checkedPassword = await this.encription.compare(
       password,
       user.password,
