@@ -1,1 +1,1 @@
-export * from './wallet-api-doc-decorator'
+export * from './wallet-api-doc-decorator';

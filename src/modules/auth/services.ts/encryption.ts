@@ -5,7 +5,7 @@ import * as bcrypt from 'bcrypt';
 export class Encryption {
   async encrypt(value: string): Promise<string> {
     const saltRounds = 10;
-    if(value){
+    if (value) {
       const salt = await bcrypt.genSalt(saltRounds);
       const hash = await bcrypt.hash(value, salt);
       return hash;

@@ -82,6 +82,4 @@ export class WalletController {
   ) {
     return await this.walletService.minusBalance(walletId, token, value);
   }
-
-
 }

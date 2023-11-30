@@ -8,7 +8,7 @@ import { AuthModule } from '../auth/auth.module.js';
 @Module({
   imports: [
     MongooseModule.forFeature([{ name: 'Wallet', schema: WalletSchema }]),
-    AuthModule
+    AuthModule,
   ],
   controllers: [WalletController],
   providers: [WalletService],

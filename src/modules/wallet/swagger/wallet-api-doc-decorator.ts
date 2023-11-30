@@ -47,7 +47,6 @@ export const ShareWalletWithUserApiDocumentation = () => {
   );
 };
 
-
 export const UpdateWalletBalanceApiDocumentation = () => {
   return applyDecorators(
     ApiOperation({
@@ -95,4 +94,3 @@ export const TotalBalanceApiDocumentation = () => {
     ApiUnauthorizedResponse({ description: 'Unauthorized.' }),
   );
 };
-
