@@ -15,7 +15,7 @@ export class WalletDto extends Document {
   @ApiProperty({ example: 'Wallet - Bradesco' })
   name: string;
   @ApiProperty({ example: '6492f433139a79cae6a3149e' })
-  usersIds: string[];
+  usersIds: string;
   @ApiProperty({ example: 'BRL' })
   currency: string;
   @ApiProperty({ example: 0 })

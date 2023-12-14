@@ -44,14 +44,14 @@ export class WalletController {
     return await this.walletService.findWalletByUser(userId);
   }
 
-  @Patch('/share-wallet')
-  @ShareWalletWithUserApiDocumentation()
-  async addUserToWallet(
-    @Query('walletId') walletId: string,
-    @Query('userId') userId: string,
-  ) {
-    return await this.walletService.addUser(walletId, userId);
-  }
+  // @Patch('/share-wallet')
+  // @ShareWalletWithUserApiDocumentation()
+  // async addUserToWallet(
+  //   @Query('walletId') walletId: string,
+  //   @Query('userId') userId: string,
+  // ) {
+  //   return await this.walletService.addUser(walletId, userId);
+  // }
 
   @Patch('/update-balance')
   @UpdateWalletBalanceApiDocumentation()

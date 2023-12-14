@@ -35,14 +35,14 @@ export class WalletService {
     return total;
   }
 
-  async addUser(walletId: string, userId: string) {
-    const wallet = await this.walletModel.findById(walletId);
-    if (!wallet) {
-      return HttpStatus.NOT_FOUND;
-    }
-    wallet.usersIds.push(userId);
-    return await wallet.save();
-  }
+  // async addUser(walletId: string, userId: string) {
+  //   const wallet = await this.walletModel.findById(walletId);
+  //   if (!wallet) {
+  //     return HttpStatus.NOT_FOUND;
+  //   }
+  //   wallet.usersIds.push(userId);
+  //   return await wallet.save();
+  // }
 
   async updateBalance(walletId: string, token: string, value: number) {
     const wallet = await this.walletModel.findById(walletId);
