@@ -30,8 +30,4 @@ export class UserDto extends Document {
   birthDate: string;
   @ApiProperty({ example: 'Europe/London' })
   timezone: string;
-  @ApiProperty({
-    example: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkY3MDQ...',
-  })
-  token: string;
 }

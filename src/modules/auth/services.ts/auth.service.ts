@@ -4,6 +4,7 @@ import { Model } from 'mongoose';
 import { UserDto } from '../schemas';
 import { JwtService } from '@nestjs/jwt';
 import { Encryption } from './encryption';
+import { UserTokenNotFoundException } from '../exceptions';
 
 @Injectable()
 export class AuthService {
@@ -27,7 +28,11 @@ export class AuthService {
   }
 
   async findByToken(token: string) {
-    return await this.userModel.findOne({ token: token });
+    const user = await this.userModel.findOne({ token: token });
+    if (user) {
+      return user;
+    }
+    throw new UserTokenNotFoundException();
   }
 
   async findById(id: string) {
